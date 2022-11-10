@@ -4,6 +4,7 @@ import Login from "../components/Login/Login";
 import SignUp from "../components/Login/SignUp";
 import Terms from "../components/Login/Terms";
 import AllServices from "../components/Shared-components/AllServices/AllServices";
+import Blog from "../components/Shared-components/Blog/Blog";
 import Main from "../layout/Main";
 import NotFound from "./404route/NotFound";
 
@@ -35,6 +36,10 @@ export const routes = createBrowserRouter([
             {
                 path: "/terms",
                 element: <Terms></Terms>,
+            },
+            {
+                path: "/blog",
+                element: <Blog></Blog>,
             }
 
         ]
