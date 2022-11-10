@@ -23,17 +23,17 @@ export const routes = createBrowserRouter([
             {
                 path: "/",
                 element: <Home></Home>,
-                loader: () => fetch('http://localhost:5000/limitServices')
+                loader: () => fetch('https://a-11-server.vercel.app/limitServices')
             },
             {
                 path: "/services",
                 element: <AllServices></AllServices>,
-                loader: () => fetch('http://localhost:5000/services')
+                loader: () => fetch('https://a-11-server.vercel.app/services')
             },
             {
                 path: "/services/:id",
                 element: <ServiceDetail></ServiceDetail>,
-                loader: ({ params }) => fetch(`http://localhost:5000/services/${params.id}`)
+                loader: ({ params }) => fetch(`https://a-11-server.vercel.app/services/${params.id}`)
             },
             {
                 path: "/login",
@@ -54,7 +54,7 @@ export const routes = createBrowserRouter([
             {
                 path: "/checkout/:id",
                 element: <PrivateRoute><Checkout></Checkout></PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5000/services/${params.id}`)
+                loader: ({ params }) => fetch(`https://a-11-server.vercel.app/services/${params.id}`)
             },
             {
                 path: "/orders",
