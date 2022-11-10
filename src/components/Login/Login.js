@@ -64,7 +64,7 @@ const Login = () => {
                     <Form.Label>Password</Form.Label>
                     <Form.Control type="password" name="password" placeholder="Enter Password" required />
                 </Form.Group>
-                <Button variant="primary" type="submit">
+                <Button variant="danger" type="submit">
                     Submit
                 </Button>
                 <Form.Group><Form.Text className="text-danger">
@@ -73,7 +73,7 @@ const Login = () => {
                 <>Don't have an account? <Link to="/signup">Sign Up</Link></>
             </Form>
             <ButtonGroup vertical>
-                <Button onClick={googleSignInHandler} className='rounded-pill' variant="info"> <FcGoogle></FcGoogle> Login with GOOGLE</Button>
+                <Button onClick={googleSignInHandler} className='rounded-pill mt-5' variant="danger"> <FcGoogle></FcGoogle> Login with GOOGLE</Button>
             </ButtonGroup>
         </div>
 

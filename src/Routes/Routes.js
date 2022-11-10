@@ -11,6 +11,7 @@ import Review from "../components/Shared-components/Review/Review";
 import ServiceDetail from "../components/Shared-components/ServiceDetail/ServiceDetail";
 import Main from "../layout/Main";
 import NotFound from "./404route/NotFound";
+import PrivateRoute from "./PrivateRoute/PrivateRoute";
 
 
 
@@ -52,12 +53,12 @@ export const routes = createBrowserRouter([
             },
             {
                 path: "/checkout/:id",
-                element: <Checkout></Checkout>,
+                element: <PrivateRoute><Checkout></Checkout></PrivateRoute>,
                 loader: ({ params }) => fetch(`http://localhost:5000/services/${params.id}`)
             },
             {
                 path: "/orders",
-                element: <Order></Order>,
+                element: <PrivateRoute><Order></Order></PrivateRoute>,
             },
             // {
             //     path: "/reviews",
