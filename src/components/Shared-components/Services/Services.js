@@ -19,7 +19,7 @@ const Services = ({ service }) => {
                         <>{service.description}</>
                     }
                 </Card.Text>
-                <Link to={`/service`}><Button className='w-100' variant="primary">Details</Button></Link>
+                <Link to={`/services/${service._id}`}><Button className='w-100' variant="primary">Details</Button></Link>
             </Card.Body>
         </Card >
     );
