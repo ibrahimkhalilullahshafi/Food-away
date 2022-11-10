@@ -1,12 +1,14 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import { PhotoProvider, PhotoView } from 'react-photo-view';
 import { Link } from 'react-router-dom';
+import 'react-photo-view/dist/react-photo-view.css';
 
 const Services = ({ service }) => {
     return (
         <Card className='col-md-6 col-lg-4 mb-3 p-0'>
-            <Card.Img variant="top" src={service.image} />
+            <PhotoProvider><PhotoView src={service.image}><Card.Img variant="top" src={service.image} /></PhotoView></PhotoProvider>
             <Card.Body>
                 <Card.Title className='text-center'>{service.name}</Card.Title>
                 <Card.Text>

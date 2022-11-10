@@ -7,6 +7,7 @@ import { FcGoogle } from 'react-icons/fc';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthProvider/AuthProvider';
 
+
 const Login = () => {
     const [error, setError] = useState('');
 
