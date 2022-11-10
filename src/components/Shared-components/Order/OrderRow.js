@@ -1,20 +1,19 @@
-// import React from 'react';
-// import { Table } from 'react-bootstrap';
+import React from 'react';
+import { ListGroup } from 'react-bootstrap';
 
 
-// const OrderRow = ({ order }) => {
-//     const { serviceName, customer, price, cell } = order;
-//     return (
-//         <div>
-//             <Table striped bordered hover><tr>
-//                 <td>{serviceName}</td>
-//                 <td>{customer}</td>
-//                 <td>{price}</td>
-//                 <td>{cell}</td>
-//             </tr></Table>
+const OrderRow = ({ order }) => {
+    const { serviceName, customer, price, cell } = order;
+    return (
 
-//         </div>
-//     );
-// };
+        <ListGroup className='my-3'>
+            <ListGroup.Item>{serviceName}</ListGroup.Item>
+            <ListGroup.Item>{customer}</ListGroup.Item>
+            <ListGroup.Item>{price}</ListGroup.Item>
+            <ListGroup.Item>{cell}</ListGroup.Item>
 
-// export default OrderRow;
+        </ListGroup>
+    );
+};
+
+export default OrderRow;
