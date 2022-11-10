@@ -5,6 +5,7 @@ import SignUp from "../components/Login/SignUp";
 import Terms from "../components/Login/Terms";
 import AllServices from "../components/Shared-components/AllServices/AllServices";
 import Main from "../layout/Main";
+import NotFound from "./404route/NotFound";
 
 
 
@@ -38,4 +39,8 @@ export const routes = createBrowserRouter([
 
         ]
     },
+    {
+        path: "/*",
+        element: <NotFound></NotFound>,
+    }
 ])
