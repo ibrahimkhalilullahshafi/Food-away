@@ -7,9 +7,11 @@ import Header from '../components/Fixed-components/Header/Header';
 const Main = () => {
     return (
         <div>
-            <Header></Header>
-            <Container><Outlet></Outlet></Container>
-            <Footer></Footer>
+            <Container>
+                <Header></Header>
+                <Outlet></Outlet>
+                <Footer></Footer>
+            </Container>
         </div>
     );
 };
