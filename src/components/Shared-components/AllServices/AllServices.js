@@ -8,6 +8,7 @@ const AllServices = () => {
     const services = useLoaderData();
     return (
         <div className='container'>
+            <h1 className='text-center'>Full Menu</h1>
             <div className='row'>
                 {services.map(service =>
                     <Card className='col-md-6 col-lg-4 mb-3 p-0' key={service._id}>

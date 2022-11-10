@@ -5,6 +5,8 @@ import SignUp from "../components/Login/SignUp";
 import Terms from "../components/Login/Terms";
 import AllServices from "../components/Shared-components/AllServices/AllServices";
 import Blog from "../components/Shared-components/Blog/Blog";
+import Checkout from "../components/Shared-components/Checkout/Checkout";
+import Order from "../components/Shared-components/Order/Order";
 import ServiceDetail from "../components/Shared-components/ServiceDetail/ServiceDetail";
 import Main from "../layout/Main";
 import NotFound from "./404route/NotFound";
@@ -46,6 +48,15 @@ export const routes = createBrowserRouter([
             {
                 path: "/blog",
                 element: <Blog></Blog>,
+            },
+            {
+                path: "/checkout/:id",
+                element: <Checkout></Checkout>,
+                loader: ({ params }) => fetch(`http://localhost:5000/services/${params.id}`)
+            },
+            {
+                path: "/orders",
+                element: <Order></Order>,
             }
 
         ]

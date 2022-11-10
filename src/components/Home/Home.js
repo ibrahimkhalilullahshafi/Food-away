@@ -15,6 +15,7 @@ const Home = () => {
             <div>
                 <img className='img-fluid' src={photo} alt="" />
             </div>
+            <h1 className='text-center'>Today's menu</h1>
 
             <div className='d-flex'>
                 {services.map(service => <Services

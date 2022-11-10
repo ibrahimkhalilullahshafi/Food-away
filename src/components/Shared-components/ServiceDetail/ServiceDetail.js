@@ -9,6 +9,7 @@ const ServiceDetail = () => {
         <div>
 
             <div className='mt-5'>
+                <h1 className='text-center'>Details</h1>
                 <div className='d-flex justify-content-center'>
                     <Card className='col-6 bg-transparent'>
                         <Card.Img variant="top" src={service.image} />
