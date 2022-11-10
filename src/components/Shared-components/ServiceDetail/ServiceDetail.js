@@ -2,8 +2,45 @@ import React from 'react';
 import { Button, Card } from 'react-bootstrap';
 import { Link, useLoaderData } from 'react-router-dom';
 
+
 const ServiceDetail = () => {
     const service = useLoaderData();
+    // const { user } = useContext(AuthContext);
+
+
+    // const handleReview = event => {
+    //     event.preventDefault();
+    //     const form = event.target;
+    //     const fullName = form.fullName.value;
+    //     const email = user?.email || 'unregistered';
+    //     const message = form.message.value;
+
+    //     const review = {
+    //         fullName,
+    //         email,
+    //         message
+    //     }
+
+    //     fetch('http://localhost:5000/reviews', {
+    //         method: 'POST',
+    //         headers: { 'content-type': 'application/json' },
+    //         body: JSON.stringify(review)
+    //     })
+    //         .then(res => res.json())
+    //         .then(data => {
+    //             console.log(data)
+    //             if (data.acknowledged) {
+    //                 alert('reviewed succssfully')
+    //                 form.reset();
+    //             }
+    //         })
+    //         .catch(error => console.error(error));
+
+    // }
+
+
+
+
 
     return (
         <div>
@@ -16,12 +53,21 @@ const ServiceDetail = () => {
                         <Card.Body>
                             <Card.Title className='text-center'>{service.name}</Card.Title>
                             <Card.Text>
-                                <p>{service.description}</p>
-                                <h3 className='text-center'>Price:{service.price}</h3>
+                                {service.description}
                             </Card.Text>
+                            <p className='text-center fs-5 fw-bold'>Price:{service.price}</p>
                         </Card.Body>
-                        <Link to={`/checkout/${service._id}`}><Button className='w-100' variant="primary">Take Away</Button></Link>
+                        <Link to={`/checkout/${service._id}`}><Button className='w-100' variant="danger">Take Away</Button></Link>
                     </Card >
+                    {/* <Form onSubmit={handleReview}>
+                        <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+                            <Form.Label>Message</Form.Label>
+                            <Form.Control name="message" as="textarea" rows={3} placeholder="Leave a message" required />
+                        </Form.Group>
+                        <Button variant="primary" type="submit">
+                            review
+                        </Button>
+                    </Form> */}
                 </div>
             </div>
 

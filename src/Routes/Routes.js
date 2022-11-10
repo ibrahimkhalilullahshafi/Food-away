@@ -7,6 +7,7 @@ import AllServices from "../components/Shared-components/AllServices/AllServices
 import Blog from "../components/Shared-components/Blog/Blog";
 import Checkout from "../components/Shared-components/Checkout/Checkout";
 import Order from "../components/Shared-components/Order/Order";
+import Review from "../components/Shared-components/Review/Review";
 import ServiceDetail from "../components/Shared-components/ServiceDetail/ServiceDetail";
 import Main from "../layout/Main";
 import NotFound from "./404route/NotFound";
@@ -57,7 +58,11 @@ export const routes = createBrowserRouter([
             {
                 path: "/orders",
                 element: <Order></Order>,
-            }
+            },
+            // {
+            //     path: "/reviews",
+            //     element: <Review></Review>
+            // }
 
         ]
     },

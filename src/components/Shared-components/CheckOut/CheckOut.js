@@ -51,9 +51,7 @@ const Checkout = () => {
                         <Card.Img variant="top" src={image} />
                         <Card.Body>
                             <Card.Title className='text-center'>{name}</Card.Title>
-                            <Card.Text>
-                                <h3 className='text-center'>Price:{price}</h3>
-                            </Card.Text>
+                            <p className='text-center fs-5 fw-bold'>Price:{price}</p>
                             <Form onSubmit={handleOrder}>
                                 <Form.Group className="mb-3" controlId="formBasicEmail">
                                     <Form.Label>Full Name</Form.Label>
@@ -71,7 +69,7 @@ const Checkout = () => {
                                     <Form.Label>Message</Form.Label>
                                     <Form.Control name="message" as="textarea" rows={3} placeholder="Leave a message" required />
                                 </Form.Group>
-                                <Button variant="primary" type="submit">
+                                <Button variant="danger" type="submit">
                                     Place Order
                                 </Button>
                             </Form>

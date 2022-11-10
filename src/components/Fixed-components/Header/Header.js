@@ -21,10 +21,10 @@ const Header = () => {
 
     return (
 
-        <Navbar className='container' collapseOnSelect expand="lg" bg="dark" variant="light">
+        <Navbar className='container' collapseOnSelect expand="lg" bg="danger" variant="light">
             <Container>
 
-                <Navbar.Brand><Link to={'/'} className="text-decoration-none fs-2 fw-bold"><img
+                <Navbar.Brand><Link to={'/'} className="text-white text-decoration-none fs-2 fw-bold"><img
                     alt=""
                     src={logo}
                     width="45"
@@ -39,17 +39,20 @@ const Header = () => {
                     <Nav>
                         <Nav>
                             <Nav className="me-auto">
-                                <Nav><Link to='/blog' className="text-decoration-none fw-semibold fs-4 text-white">BLOG</Link></Nav>
+                                <Nav><Link to='/blog' className="text-decoration-none fw-semibold fs-3 text-white">BLOG</Link></Nav>
+                            </Nav>
+                            <Nav className="me-auto">
+                                <Nav><Link to='/orders' className="text-decoration-none fw-semibold fs-3 text-white mx-3">ORDER</Link></Nav>
                             </Nav>
                             {
                                 user?.uid ?
                                     <><span className='ms-2 mt-2'>{user?.displayName}</span>
-                                        <Button onClick={handleLogOut} variant="primary" className='ms-2 mb-3'>Log Out</Button>
+                                        <Button onClick={handleLogOut} variant="secondary" className='ms-2 mb-3'>Log Out</Button>
                                     </>
                                     :
                                     <>
-                                        <Link to="/login" className="text-decoration-none ms-2"><Button>Login</Button></Link>
-                                        <Link to="/signup" className="text-decoration-none ms-2"><Button>Sign Up</Button></Link>
+                                        <Link to="/login" className="text-decoration-none ms-2"><Button variant="secondary">Login</Button></Link>
+                                        <Link to="/signup" className="text-decoration-none ms-2"><Button variant="secondary">Sign Up</Button></Link>
                                     </>
                             }
                         </Nav>

@@ -24,7 +24,7 @@ const Home = () => {
                 ></Services>
                 )}
             </div>
-            <Link to="/services" className='d-flex justify-content-center'><Button className='w-10px' variant="primary">See all</Button></Link>
+            <Link to="/services" className='d-flex justify-content-center text-decoration-none'><Button className='w-10px' variant="danger">See all</Button></Link>
             <div className='d-flex flex-row'>
                 <div className='mx-3 my-5 text-center justify-content-evenly'>
                     <img className='img-fluid' src={pic1} alt="" />

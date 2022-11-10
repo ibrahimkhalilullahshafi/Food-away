@@ -1,3 +1,33 @@
+# Project Details
+
+❄️ Project Name : Food Away (its a food delivery service website) 
+
+❄️ Live-site link: 
+
+    (https://breaking-code-6997b.web.app)
+
+❄️ Technologies: A list of technologies used within the project :
+    
+*   "bootstrap": ,
+*   "firebase": "^9.12.1",
+*   "react": "^18.2.0",
+*   "react-bootstrap": "^2.5.0",
+*   "react-dom": "^18.2.0",
+*   "react-icons": "^4.6.0",
+*   "react-router-dom": "^6.4.2",
+*   "react-scripts": "5.0.1",
+*   "react-photo-view": "^1.2.2"
+
+❄️ Features:
+
+*   Easy login and sign in system,
+*   Private route,
+*   Review section,
+*   Blog section,
+*   Order section.
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
